@@ -1,0 +1,24 @@
+让修改hosts生效的方法:https://laod.cn/hosts/2016-google-hosts.html
+修改hosts后生效的方法：(12月2日)
+Windows
+开始 -> 运行 -> 输入cmd -> 在CMD窗口输入
+1
+ipconfig /flushdns
+Linux
+终端输入
+1
+sudo rcnscd restart
+对于systemd发行版，请使用命令
+
+1
+sudo systemctl restart NetworkManager
+如果不懂请都尝试下
+
+Mac OS X终端输入
+1
+sudo killall -HUP mDNSResponder
+Android
+开启飞行模式 -> 关闭飞行模式
+通用方法
+拔网线(断网) -> 插网线(重新连接网络)
+(有时候不需要这么做也可以的，反正老D很少刷新DNS，刷新可以更快的解析)
